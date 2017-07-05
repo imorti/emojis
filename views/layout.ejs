@@ -29,8 +29,27 @@
     -->
 
     <!--STYLES-->
+    <link rel="stylesheet" href="/styles/bootstrap-theme.css">
+    <link rel="stylesheet" href="/styles/bootstrap.css">
     <link rel="stylesheet" href="/styles/importer.css">
     <!--STYLES END-->
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/angular.js"></script>
+    <!--SCRIPTS END-->
+
+    <script>
+
+      angular.module('Firstwalk', []);
+      angular.module('Firstwalk').controller('BaseCtrl', ['$scope', function ($scope) {
+
+          $scope.things = [{
+              id: 234233234,
+              name: 'imorti'
+          }];
+      }]);
+
+    </script>
   </head>
 
   <body>
@@ -60,7 +79,7 @@
     -->
 
     <!--TEMPLATES-->
-    
+
     <!--TEMPLATES END-->
 
 
@@ -87,8 +106,6 @@
 
     -->
 
-    <!--SCRIPTS-->
-    <script src="/js/dependencies/sails.io.js"></script>
-    <!--SCRIPTS END-->
+
   </body>
 </html>
