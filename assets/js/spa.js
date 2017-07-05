@@ -1,21 +1,13 @@
 
       angular.module('Firstwalk', []);
-      angular.module('Firstwalk').controller('BaseCtrl', ['$scope', function ($scope) {
+      angular.module('Firstwalk').controller('BaseCtrl', ['$scope','$http', function ($scope, $http) {
 
-          $scope.emojis = [{
-              id: 234233234,
-              text: ':-)'
-          },
-          {
-              id: 234233235,
-              text: ':p'
-          },
-          {
-              id: 234233236,
-              text: '8'
-          },
-          {
-              id: 234233237,
-              text: ':'
-          }];
+
+        $http.get('/emoji').then(function (response){
+
+            $scope.emojis = response.data;
+
+        });
+
+
       }]);
