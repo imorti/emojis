@@ -32,10 +32,15 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'profile'
-  }
+  'GET /': {
+    controller: 'UserController',
+    action: 'findOne'
+  },
 
+  'GET /:name': {
+    controller: 'UserController',
+    action: 'findOne'
+  }
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

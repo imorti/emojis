@@ -17,6 +17,10 @@ module.exports = {
     emojis: {
       collection: 'Emoji',
       via: 'owner'
+    },
+
+    name: {
+      type: 'string'
     }
 
   }
